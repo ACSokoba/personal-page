@@ -2,12 +2,12 @@
   "name": "acsokoba-resume",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://acsokoba.github.io/",
+  "homepage": "https://acsokoba.github.io",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist -t true",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
