@@ -58,7 +58,7 @@ export const projects: Project[] = [
             "Configured CloudFront for content distribution",
             "Created CI pipeline with GitHub Actions for automatic deployment"
         ],
-        imageUrl: "/assets/images/clair_de_lune_peek.png",
+        imageUrl: "src/assets/images/clair_de_lune_peek.png",
         websiteUrl: "https://clairdeluneci.com/"
     },
 
