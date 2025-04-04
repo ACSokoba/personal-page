@@ -50,7 +50,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                     <div className="mt-3 mb-4">
                         <ul className="list-disc pl-5 space-y-1 text-gray-600">
                             {tasks.map((task, index) => (
-                                <li key={index} className="text-sm">{task}</li>
+                                <li key={index} className="text-md">{task}</li>
                             ))}
                         </ul>
                     </div>
