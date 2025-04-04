@@ -27,7 +27,7 @@ function App() {
 
     return (
         <>
-            <div className="max-w-[80rem] mx-auto">
+            <div className="max-w-[75rem] mx-auto">
                 <nav className="flex justify-center items-center mb-8 bg-white p-2 rounded-xl shadow-md sticky top-5 z-50 mx-auto w-fit px-8">
                     <a href="#"
                         className={`py-3 px-6 mx-1 text-gray-600 font-medium rounded-xl transition-all duration-300 hover:bg-blue-50 ${activePage === 'resume' ? 'bg-blue-100 text-blue-800' : ''}`}
@@ -100,6 +100,21 @@ function App() {
                                 <p className="mb-2"><span className="font-semibold">English</span> - Proficient, TOEIC 720</p>
                                 <p><span className="font-semibold">French</span> - Native</p>
                             </div>
+
+                            <div className="bg-white rounded-xl p-6 shadow-md border-l-4 border-purple-100">
+                                <h2 className="text-xl font-semibold mb-4 text-gray-800">Certifications</h2>
+                                <div className="space-y-2">
+                                    <p className="mb-2">
+                                        <span className="font-semibold">AWS Cloud Practitioner</span>
+                                        <span className="text-sm text-gray-500 ml-2">2023</span>
+                                    </p>
+                                    <p>
+                                        <span className="font-semibold">UX-PM1</span>
+                                        <span className="text-sm text-gray-500 ml-2">2022</span>
+                                    </p>
+                                </div>
+                            </div>
+
                         </div>
 
                         <div className="flex flex-col gap-5">
@@ -193,19 +208,7 @@ function App() {
                                 </div>
                             </div>
 
-                            <div className="bg-white rounded-xl p-6 shadow-md border-l-4 border-purple-100">
-                                <h2 className="text-xl font-semibold mb-4 text-gray-800">Certifications</h2>
-                                <div className="space-y-2">
-                                    <p className="mb-2">
-                                        <span className="font-semibold">AWS Cloud Practitioner</span>
-                                        <span className="text-sm text-gray-500 ml-2">2023</span>
-                                    </p>
-                                    <p>
-                                        <span className="font-semibold">UX-PM1</span>
-                                        <span className="text-sm text-gray-500 ml-2">2022</span>
-                                    </p>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                 </div>

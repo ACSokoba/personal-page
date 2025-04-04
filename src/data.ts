@@ -38,7 +38,7 @@ export const projects: Project[] = [
             "Implemented code in TypeScript and Node.js and NestJS framework  ",
             "Set up the VPS, secured it with a firewall, encryption, and an Nginx reverse proxy  ",
             "Containerized the app with Docker  ",
-            "Set up a CI pipeline with GitHub Actions  ",
+            "Set up a CI/CD pipeline with GitHub Actions  ",
             "Documented code with Swagger",
         ],
         imageUrl: "/assets/images/automachines_CI_peek.png"
@@ -56,7 +56,7 @@ export const projects: Project[] = [
             "Implemented content management system for easy updates",
             "Set up AWS S3 bucket for hosting",
             "Configured CloudFront for content distribution",
-            "Created CI pipeline with GitHub Actions for automatic deployment"
+            "Created CI/CD pipeline with GitHub Actions for automatic deployment"
         ],
         imageUrl: "/assets/images/clair_de_lune_peek.png",
         websiteUrl: "https://clairdeluneci.com/"
