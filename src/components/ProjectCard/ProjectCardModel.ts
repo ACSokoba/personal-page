@@ -4,6 +4,7 @@ export type Project = {
     technologies: Technology[];
     imageUrl: string;
     websiteUrl?: string;
+    tasks?: string[];
 }
 export type JobId = 'sfr' | 'carrefour' | 'orange';
 export type TechnologyColor = string;
@@ -19,4 +20,5 @@ export interface ProjectCardProps {
     technologies: Technology[];
     imageUrl: string;
     websiteUrl?: string;
+    tasks?: string[];
 }

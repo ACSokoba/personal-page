@@ -4,10 +4,7 @@ export const projects: Project[] = [
     {
         title: "Lekza vtc",
         description: `Lekza is a project I did for a client in the personal VTC sector.
-        It's a simple landing page that promotes the VTC services of the client and show his contacts.
-        The website is built with Angular and hosted on netlify, setup a domain name for the client.
-
-        `,
+        It's a simple landing page that promotes the VTC services of the client and show his contacts.`,
         technologies: [
             { name: "Angular", color: "blue" },
             { name: "HTML", color: "red" },
@@ -15,27 +12,34 @@ export const projects: Project[] = [
             { name: "Typescript", color: "purple" },
             { name: "Netlify", color: "green" }
         ],
+        tasks: [
+            "Designed and developed a responsive landing page",
+            "Implemented contact form with validation",
+            "Set up DNS configuration and domain management",
+            "Deployed website to Netlify hosting",
+            "Created CI/CD pipeline for automatic deployment"
+        ],
         imageUrl: "src/assets/images/lekza_website_peek.png",
         websiteUrl: "https://vtc.lekza-transexpress.net/"
     },
     {
         title: "Automachines CI",
-        description: `Had to implement a middle server for mobile payment for the company coffee machines.
-        When customers pay with their phone, the payment is done through the middle server.
-        It also logs and give insights about the transactions of the machines, each month sending a report to the client.
-        - Implemented code in typescript and NodeJS
-        - Setup the VPS, secured it with a firewall, encryption and a nginx reverse proxy
-        - Containerized the app with docker
-        - Setup a CI pipeline with Github Actions
-        - Documented code with Swagger
-        `,
+        description: "Implemented and secured a middleware server for mobile payment for the company coffee machines. \n When customers pay with their phone, the payment is done through the middle server.  It also logs and gives insights about the transactions of the machines, each month sending a report to the client.",
         technologies: [
             { name: "NodeJS", color: "purple" },
+            { name: "NestJS", color: "purple" },
             { name: "Typescript", color: "purple" },
             { name: "Hosting VPS", color: "green" },
             { name: "Docker", color: "blue" },
             { name: "Github Actions", color: "blue" },
             { name: "Swagger", color: "green" }
+        ],
+        tasks: [
+            "Implemented code in TypeScript and Node.js and NestJS framework  ",
+            "Set up the VPS, secured it with a firewall, encryption, and an Nginx reverse proxy  ",
+            "Containerized the app with Docker  ",
+            "Set up a CI pipeline with Github Actions  ",
+            "Documented code with Swagger",
         ],
         imageUrl: "src/assets/images/automachines_CI_peek.png"
     },
@@ -46,6 +50,13 @@ export const projects: Project[] = [
             { name: "Angular", color: "blue" },
             { name: "AWS S3", color: "green" },
             { name: "Github Actions", color: "blue" }
+        ],
+        tasks: [
+            "Designed responsive school website using Angular",
+            "Implemented content management system for easy updates",
+            "Set up AWS S3 bucket for hosting",
+            "Configured CloudFront for content distribution",
+            "Created CI pipeline with GitHub Actions for automatic deployment"
         ],
         imageUrl: "src/assets/images/clair_de_lune_peek.png",
         websiteUrl: "https://clairdeluneci.com/"

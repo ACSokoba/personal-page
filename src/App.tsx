@@ -226,6 +226,7 @@ function App() {
                                     key={index}
                                     title={project.title}
                                     description={project.description}
+                                    tasks={project.tasks}
                                     technologies={project.technologies}
                                     imageUrl={project.imageUrl}
                                     websiteUrl={project.websiteUrl}
