@@ -19,7 +19,7 @@ export const projects: Project[] = [
             "Deployed website to Netlify hosting",
             "Created CI/CD pipeline for automatic deployment"
         ],
-        imageUrl: "src/assets/images/lekza_website_peek.png",
+        imageUrl: "/assets/images/lekza_website_peek.png",
         websiteUrl: "https://vtc.lekza-transexpress.net/"
     },
     {
@@ -41,7 +41,7 @@ export const projects: Project[] = [
             "Set up a CI pipeline with Github Actions  ",
             "Documented code with Swagger",
         ],
-        imageUrl: "src/assets/images/automachines_CI_peek.png"
+        imageUrl: "/assets/images/automachines_CI_peek.png"
     },
     {
         title: "Clair de lune",
@@ -58,7 +58,7 @@ export const projects: Project[] = [
             "Configured CloudFront for content distribution",
             "Created CI pipeline with GitHub Actions for automatic deployment"
         ],
-        imageUrl: "src/assets/images/clair_de_lune_peek.png",
+        imageUrl: "/assets/images/clair_de_lune_peek.png",
         websiteUrl: "https://clairdeluneci.com/"
     },
 
