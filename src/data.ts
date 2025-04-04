@@ -38,7 +38,7 @@ export const projects: Project[] = [
             "Implemented code in TypeScript and Node.js and NestJS framework  ",
             "Set up the VPS, secured it with a firewall, encryption, and an Nginx reverse proxy  ",
             "Containerized the app with Docker  ",
-            "Set up a CI pipeline with Github Actions  ",
+            "Set up a CI pipeline with GitHub Actions  ",
             "Documented code with Swagger",
         ],
         imageUrl: "/assets/images/automachines_CI_peek.png"

@@ -220,7 +220,7 @@ function App() {
                                 title={project.title}
                                 description={project.description}
                                 technologies={project.technologies}
-                                imageUrl={project.imageUrl}
+                                imageUrl={import.meta.env.BASE_URL + project.imageUrl}
                                 websiteUrl={project.websiteUrl}
                                 tasks={project.tasks}
                             />
