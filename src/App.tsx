@@ -23,7 +23,7 @@ function App() {
                 </nav>
 
                 {/* Resume Page */}
-                <div id="resume" className={`${activePage === 'resume' ? 'block animate-fadeIn' : 'hidden'}`}>
+                <div id="resume" className={`${activePage === 'resume' ? 'block animate-fadeIn' : 'hidden'} mx-5 md:mx-0 mb-5`}>
                     <Resume />
                 </div>
 
