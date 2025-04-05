@@ -215,7 +215,7 @@ function App() {
 
                 {/* Projects Page */}
                 <div id="projects" className={`${activePage === 'projects' ? 'block animate-fadeIn' : 'hidden'}`}>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6  mx-5 md:mx-0 mb-5">
                         {projects.map((project, index) => (
                             <ProjectCard
                                 key={index}

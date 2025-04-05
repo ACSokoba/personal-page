@@ -41,7 +41,8 @@ export const projects: Project[] = [
             "Set up a CI/CD pipeline with GitHub Actions  ",
             "Documented code with Swagger",
         ],
-        imageUrl: "/assets/images/automachines_CI_peek.png"
+        imageUrl: "/assets/images/automachines_CI_peek.png",
+        websiteUrl: "https://www.linkedin.com/company/automachinesci/"
     },
     {
         title: "Clair de lune",
