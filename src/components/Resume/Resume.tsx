@@ -42,7 +42,6 @@ export const Resume: React.FC<ResumeProps> = () => {
             const link = document.createElement("a");
             link.href = "assets/Aboubakar_Resume_Fullstack_ENG_GD.pdf";
             link.download = "Aboubakar_Resume_Fullstack_ENG_GD.pdf";
-            console.log(link);
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
