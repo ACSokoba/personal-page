@@ -82,3 +82,21 @@ export const talks: Talk[] = [
     url: "https://www.linkedin.com/posts/aboubakar-christian-sokoba-304418146_quel-%C3%A9tait-ton-dernier-d%C3%A9fi-moi-c%C3%A9tait-activity-7057347206986493952-Hg4Q?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAACNNGLQBoXUlGhH5PoWoOGsCscRfypStDx0",
   },
 ];
+
+// Define the Article interface
+export interface Article {
+  url: string;
+}
+
+export const articles: Article[] = [
+  { url: "https://microservices.io/patterns/data/saga.html" },
+  {
+    url: "https://philbooth.me/blog/some-useful-non-obvious-postgres-patterns",
+  },
+  { url: "https://cloud.google.com/apis/design" },
+  {
+    url: "https://christianlydemann.com/18-performance-optimization-techniques-for-angular-applications-podcast-with-michael-hladky/",
+  },
+  { url: "https://roadmap.sh/" },
+  { url: "https://refactoring.guru/fr/refactoring/techniques" },
+];

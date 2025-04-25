@@ -5,7 +5,7 @@ function TalkCard({ talk }: { talk: Talk }) {
 
   return (
     <div className="flex rounded-xl mt-6 p-5 gap-3 bg-white mx-5 md:mx-0 mb-5">
-      <div className="">
+      <div>
         <img
           src={imageUrl}
           alt={title}
@@ -13,7 +13,7 @@ function TalkCard({ talk }: { talk: Talk }) {
         />
       </div>
 
-      <div className="">
+      <div>
         <h3 className="text-xl font-semibold mb-2 text-gray-800">{title}</h3>
         <p>{description}</p>
         <a

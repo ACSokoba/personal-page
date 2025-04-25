@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { ProjectCard } from "./components/ProjectCard/ProjectCard";
-import { projects } from "./data";
+import { articles, projects } from "./data";
 import { Resume } from "./components/Resume/Resume";
 import TalkCard from "./components/TalkCard/TalkCard";
 import { talks } from "./data";
+import ArticleCard from "./components/ArticleCard/ArticleCard";
 function App() {
   const [activePage, setActivePage] = useState("resume");
 
@@ -13,7 +14,7 @@ function App() {
 
   return (
     <>
-      <div className="max-w-[75rem] mx-auto">
+      <div className="mx-auto w-fit">
         <nav className="flex justify-center items-center mb-8 bg-white p-2 rounded-xl shadow-md sticky top-5 z-50 mx-auto w-fit px-8">
           <a
             href="#"
@@ -41,6 +42,15 @@ function App() {
             onClick={() => showPage("talks")}
           >
             Talks
+          </a>
+          <a
+            href="#"
+            className={`py-3 px-6 mx-1 text-gray-600 font-medium rounded-xl transition-all duration-300 hover:bg-blue-50 ${
+              activePage === "articles" ? "bg-blue-100 text-blue-800" : ""
+            }`}
+            onClick={() => showPage("articles")}
+          >
+            Articles
           </a>
         </nav>
 
@@ -85,6 +95,22 @@ function App() {
         >
           {talks.map((talk, index) => (
             <TalkCard key={index} talk={talk} />
+          ))}
+        </div>
+
+        {/* Articles Page */}
+        <div
+          id="articles"
+          className={`${
+            activePage === "articles" ? "block animate-fadeIn" : "hidden"
+          } mx-5 md:mx-32`}
+        >
+          <h1 className="text-center">
+            Here I list some resources and articles that I found useful or
+            interesting
+          </h1>
+          {articles.map((article, index) => (
+            <ArticleCard key={index} article={article} />
           ))}
         </div>
       </div>
