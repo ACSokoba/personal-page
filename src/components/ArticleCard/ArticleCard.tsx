@@ -1,5 +1,5 @@
 // ArticleCard.jsx
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Article } from "../../data";
 
 type ArticleCardProps = {
