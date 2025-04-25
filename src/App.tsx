@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       <div className="">
-        <nav className="flex justify-center items-center mb-8 bg-white p-2 rounded-xl shadow-md sticky top-5 z-50 mx-auto max-w-[360px] overflow-x-scroll md:max-width-[1200px] px-8">
+        <nav className="flex justify-center items-center mb-8 bg-white p-2 rounded-xl shadow-md sticky top-5 z-50 mx-auto md:max-width-[1200px] px-8 overflow-auto scrollbar-hide">
           <a
             id="resumeLink"
             href="#"
