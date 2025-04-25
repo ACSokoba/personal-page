@@ -5,11 +5,19 @@ import { Resume } from "./components/Resume/Resume";
 import TalkCard from "./components/TalkCard/TalkCard";
 import { talks } from "./data";
 import ArticleCard from "./components/ArticleCard/ArticleCard";
+
 function App() {
   const [activePage, setActivePage] = useState("resume");
 
   const showPage = (page: string) => {
     setActivePage(page);
+  };
+
+  const scrollIfMobile = (elementId: string) => {
+    if (window.innerWidth < 1024) {
+      const element = document.getElementById(elementId);
+      element?.scrollIntoView({ behavior: "smooth", inline: "center" });
+    }
   };
 
   return (
@@ -25,11 +33,7 @@ function App() {
             onClick={() => {
               if (activePage !== "resume") {
                 showPage("resume");
-                const element = document.getElementById("resumeLink");
-                element?.scrollIntoView({
-                  behavior: "smooth",
-                  inline: "center",
-                });
+                scrollIfMobile("resumeLink");
               }
             }}
           >
@@ -44,11 +48,7 @@ function App() {
             onClick={() => {
               if (activePage !== "projects") {
                 showPage("projects");
-                const element = document.getElementById("projectsLink");
-                element?.scrollIntoView({
-                  behavior: "smooth",
-                  inline: "center",
-                });
+                scrollIfMobile("projectsLink");
               }
             }}
           >
@@ -61,9 +61,10 @@ function App() {
               activePage === "talks" ? "bg-blue-100 text-blue-800" : ""
             }`}
             onClick={() => {
-              showPage("talks");
-              const element = document.getElementById("talksLink");
-              element?.scrollIntoView({ behavior: "smooth", inline: "center" });
+              if (activePage !== "talks") {
+                showPage("talks");
+                scrollIfMobile("talksLink");
+              }
             }}
           >
             Talks
@@ -75,9 +76,10 @@ function App() {
               activePage === "articles" ? "bg-blue-100 text-blue-800" : ""
             }`}
             onClick={() => {
-              showPage("articles");
-              const element = document.getElementById("articlesLink");
-              element?.scrollIntoView({ behavior: "smooth", inline: "center" });
+              if (activePage !== "articles") {
+                showPage("articles");
+                scrollIfMobile("articlesLink");
+              }
             }}
           >
             Articles
