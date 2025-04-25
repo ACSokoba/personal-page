@@ -14,8 +14,8 @@ function App() {
 
   return (
     <>
-      <div className="">
-        <nav className="flex justify-center items-center mb-8 bg-white p-2 rounded-xl shadow-md sticky top-5 z-50 mx-auto md:max-width-[1200px] px-8 overflow-auto scrollbar-hide">
+      <div className="mx-5 lg:mx-16">
+        <nav className="flex items-center md:justify-center mb-8 bg-white p-2 rounded-xl shadow-md sticky top-1 lg:top-5 z-50 mx-auto md:max-width-[1200px] px-8 overflow-auto scrollbar-hide">
           <a
             id="resumeLink"
             href="#"
@@ -23,9 +23,14 @@ function App() {
               activePage === "resume" ? "bg-blue-100 text-blue-800" : ""
             }`}
             onClick={() => {
-              showPage("resume");
-              const element = document.getElementById("resumeLink");
-              element?.scrollIntoView({ behavior: "smooth", inline: "center" });
+              if (activePage !== "resume") {
+                showPage("resume");
+                const element = document.getElementById("resumeLink");
+                element?.scrollIntoView({
+                  behavior: "smooth",
+                  inline: "center",
+                });
+              }
             }}
           >
             Resume
@@ -37,9 +42,14 @@ function App() {
               activePage === "projects" ? "bg-blue-100 text-blue-800" : ""
             }`}
             onClick={() => {
-              showPage("projects");
-              const element = document.getElementById("projectsLink");
-              element?.scrollIntoView({ behavior: "smooth", inline: "center" });
+              if (activePage !== "projects") {
+                showPage("projects");
+                const element = document.getElementById("projectsLink");
+                element?.scrollIntoView({
+                  behavior: "smooth",
+                  inline: "center",
+                });
+              }
             }}
           >
             Projects
@@ -79,7 +89,7 @@ function App() {
           id="resume"
           className={`${
             activePage === "resume" ? "block animate-fadeIn" : "hidden"
-          } mx-5 md:mx-0 mb-5`}
+          } mb-5`}
         >
           <Resume />
         </div>
@@ -91,7 +101,7 @@ function App() {
             activePage === "projects" ? "block animate-fadeIn" : "hidden"
           }`}
         >
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mx-5 md:mx-0 mb-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-5">
             {projects.map((project, index) => (
               <ProjectCard
                 key={index}
@@ -123,12 +133,12 @@ function App() {
           id="articles"
           className={`${
             activePage === "articles" ? "block animate-fadeIn" : "hidden"
-          } mx-5 md:mx-32`}
+          } `}
         >
-          <h1 className="text-center">
+          <h3 className="text-lg font-semibold mt-2">
             Here I list some resources and articles that I found useful or
             interesting
-          </h1>
+          </h3>
           {articles.map((article, index) => (
             <ArticleCard key={index} article={article} />
           ))}

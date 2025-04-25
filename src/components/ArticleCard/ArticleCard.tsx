@@ -20,7 +20,7 @@ const ArticleCard = ({ article }: ArticleCardProps) => {
   return (
     <>
       <a href={article.url} target="_blank" rel="noopener noreferrer">
-        <div className="flex rounded-xl mt-6 p-5 gap-3 bg-white mx-5 md:mx-0 mb-5">
+        <div className="flex rounded-xl mt-6 p-5 gap-3 bg-white mb-5">
           <div className="hidden md:block">
             {metadata.image?.url && (
               <img
