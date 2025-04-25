@@ -14,41 +14,61 @@ function App() {
 
   return (
     <>
-      <div className="mx-auto w-fit">
-        <nav className="flex justify-center items-center mb-8 bg-white p-2 rounded-xl shadow-md sticky top-5 z-50 mx-auto w-fit px-8">
+      <div className="">
+        <nav className="flex justify-center items-center mb-8 bg-white p-2 rounded-xl shadow-md sticky top-5 z-50 mx-auto max-w-[360px] overflow-x-scroll md:max-width-[1200px] px-8">
           <a
+            id="resumeLink"
             href="#"
             className={`py-3 px-6 mx-1 text-gray-600 font-medium rounded-xl transition-all duration-300 hover:bg-blue-50 ${
               activePage === "resume" ? "bg-blue-100 text-blue-800" : ""
             }`}
-            onClick={() => showPage("resume")}
+            onClick={() => {
+              showPage("resume");
+              const element = document.getElementById("resumeLink");
+              element?.scrollIntoView({ behavior: "smooth", inline: "center" });
+            }}
           >
             Resume
           </a>
           <a
+            id="projectsLink"
             href="#"
             className={`py-3 px-6 mx-1 text-gray-600 font-medium rounded-xl transition-all duration-300 hover:bg-blue-50 ${
               activePage === "projects" ? "bg-blue-100 text-blue-800" : ""
             }`}
-            onClick={() => showPage("projects")}
+            onClick={() => {
+              showPage("projects");
+              const element = document.getElementById("projectsLink");
+              element?.scrollIntoView({ behavior: "smooth", inline: "center" });
+            }}
           >
             Projects
           </a>
           <a
+            id="talksLink"
             href="#"
             className={`py-3 px-6 mx-1 text-gray-600 font-medium rounded-xl transition-all duration-300 hover:bg-blue-50 ${
               activePage === "talks" ? "bg-blue-100 text-blue-800" : ""
             }`}
-            onClick={() => showPage("talks")}
+            onClick={() => {
+              showPage("talks");
+              const element = document.getElementById("talksLink");
+              element?.scrollIntoView({ behavior: "smooth", inline: "center" });
+            }}
           >
             Talks
           </a>
           <a
+            id="articlesLink"
             href="#"
             className={`py-3 px-6 mx-1 text-gray-600 font-medium rounded-xl transition-all duration-300 hover:bg-blue-50 ${
               activePage === "articles" ? "bg-blue-100 text-blue-800" : ""
             }`}
-            onClick={() => showPage("articles")}
+            onClick={() => {
+              showPage("articles");
+              const element = document.getElementById("articlesLink");
+              element?.scrollIntoView({ behavior: "smooth", inline: "center" });
+            }}
           >
             Articles
           </a>
