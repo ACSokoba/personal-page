@@ -8,6 +8,8 @@ export const Resume: React.FC<ResumeProps> = () => {
     orange: true,
   });
 
+  const [showDropdown, setShowDropdown] = useState(false);
+
   const toggleJob = (jobId: JobId) => {
     setExpandedJobs((prev) => ({
       ...prev,
@@ -22,9 +24,10 @@ export const Resume: React.FC<ResumeProps> = () => {
           SOKOBA Aboubakar Christian
         </h1>
         <p className="text-lg text-gray-600 mb-4">Senior Fullstack Developer</p>
-        <div className="flex justify-center flex-wrap gap-4">
-          <p className="text-gray-600">sokobachristian@yahoo.fr</p>
-          <p className="text-gray-400">•</p>
+        <div className="flex flex-col justify-center flex-wrap gap-4">
+          <a className="text-gray-600" href="mailto:sokobachristian@yahoo.fr">
+            sokobachristian@yahoo.fr
+          </a>
           <p className="text-gray-600">+33 7 81 65 74 90</p>
         </div>
 
@@ -36,19 +39,64 @@ export const Resume: React.FC<ResumeProps> = () => {
           to help build reliable applications and have a good impact on my team.
         </p>
 
-        <button
-          className="cursor-pointer inline-block bg-blue-100 text-gray-800 py-3 px-6 mt-5 mb-5 rounded-xl font-medium transition-all duration-300 hover:bg-purple-100 hover:-translate-y-0.5 hover:shadow-lg border-none"
-          onClick={() => {
-            const link = document.createElement("a");
-            link.href = "assets/Aboubakar_Resume_Fullstack_ENG_GD.pdf";
-            link.download = "Aboubakar_Resume_Fullstack_ENG_GD.pdf";
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-          }}
-        >
-          Download Resume PDF
-        </button>
+        <div className="relative inline-block">
+          <button
+            className="cursor-pointer inline-block bg-blue-100 text-gray-800 py-3 px-6 mt-5 mb-2 rounded-xl font-medium transition-all duration-300 hover:bg-purple-100 hover:-translate-y-0.5 hover:shadow-lg border-none whitespace-nowrap"
+            onClick={() => setShowDropdown(!showDropdown)}
+          >
+            Download Resume PDF
+            <svg
+              className={`inline-block ml-2 w-4 h-4 transition-transform duration-300 ${
+                showDropdown ? "rotate-180" : ""
+              }`}
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+
+          {showDropdown && (
+            <div className="absolute z-10 mt-1 w-full rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+              <div className="py-1" role="menu" aria-orientation="vertical">
+                <button
+                  className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                  onClick={() => {
+                    const link = document.createElement("a");
+                    link.href = "assets/Aboubakar_Resume_Fullstack_ENG_GD.pdf";
+                    link.download = "Aboubakar_Resume_Fullstack_ENG_GD.pdf";
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    setShowDropdown(false);
+                  }}
+                >
+                  English Version
+                </button>
+                <button
+                  className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                  onClick={() => {
+                    const link = document.createElement("a");
+                    link.href = "assets/Aboubakar_Resume_Fullstack_FR_GD.pdf";
+                    link.download = "Aboubakar_Resume_Fullstack_FR_GD.pdf";
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    setShowDropdown(false);
+                  }}
+                >
+                  French Version
+                </button>
+              </div>
+            </div>
+          )}
+        </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-5">
