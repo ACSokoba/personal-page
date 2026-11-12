@@ -205,6 +205,27 @@ export const translations: Record<Language, TranslationSet> = {
     },
     projects: [
       {
+        title: "Deneya",
+        description:
+          "Deneya est une application mobile qui relie les crèches et écoles maternelles aux familles en Côte d'Ivoire. Dans des canaux par classe, la direction et l'équipe publient photos, vidéos et annonces, que les parents suivent en temps réel. Les familles rejoignent l'établissement avec un code d'invitation, et chaque adhésion est validée par la direction.",
+        technologies: [
+          { name: "React Native (Expo)", color: "blue" },
+          { name: "NestJS", color: "purple" },
+          { name: "PostgreSQL", color: "green" },
+          { name: "Drizzle", color: "purple" },
+          { name: "Cloudflare R2", color: "green" },
+          { name: "Monorepo pnpm", color: "blue" },
+        ],
+        tasks: [
+          "Développement de l'application mobile avec Expo : canaux par classe, médias et messages non lus",
+          "Conception de l'API NestJS avec PostgreSQL et Drizzle",
+          "Stockage des photos et vidéos sur Cloudflare R2",
+          "Adhésion par code d'invitation avec validation par la direction",
+        ],
+        imageUrl: "assets/images/deneya_peek.png",
+        websiteUrl: "https://deneya.app",
+      },
+      {
         title: "Lekza vtc",
         description:
           "Lekza est un projet réalisé pour un client du secteur VTC. Il s'agit d'une landing page simple qui met en avant ses services et ses coordonnées.",
@@ -386,6 +407,27 @@ export const translations: Record<Language, TranslationSet> = {
       },
     },
     projects: [
+      {
+        title: "Deneya",
+        description:
+          "Deneya is a mobile app that connects nurseries and preschools with families in Côte d'Ivoire. In class channels, the school's management and staff post photos, videos and announcements that parents follow in real time. Families join with an invitation code, and each membership is approved by the school's management.",
+        technologies: [
+          { name: "React Native (Expo)", color: "blue" },
+          { name: "NestJS", color: "purple" },
+          { name: "PostgreSQL", color: "green" },
+          { name: "Drizzle", color: "purple" },
+          { name: "Cloudflare R2", color: "green" },
+          { name: "pnpm monorepo", color: "blue" },
+        ],
+        tasks: [
+          "Built the mobile app with Expo: class channels, media and unread messages",
+          "Designed the NestJS API with PostgreSQL and Drizzle",
+          "Stored photos and videos on Cloudflare R2",
+          "Invitation-code membership approved by the school's management",
+        ],
+        imageUrl: "assets/images/deneya_peek.png",
+        websiteUrl: "https://deneya.app",
+      },
       {
         title: "Lekza vtc",
         description:
